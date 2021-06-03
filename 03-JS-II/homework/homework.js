@@ -122,11 +122,11 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  const entero = Math.floor(numero)
-  if(entero){
+  var aux = numero - Math.floor(numero)
+  if (aux == 0) {
     return true
   }
-  else{
+  else {
     return false
   }
 }
@@ -211,11 +211,10 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí  
-  var i;
   var resultados = []
-  for (let index = 0; i< 11; i++) {
-      const product = 6 * i
-      resultados.push(product)
+  for (let i= 0; i< 11; i++) {
+
+      resultados.push(6*i)
   }
   return resultados
   
@@ -224,7 +223,8 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if (numero.toString().lenght === 3){
+  
+  if (numero.toString().length === 3){
     return true
   }
   else{
